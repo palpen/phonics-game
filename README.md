@@ -4,11 +4,7 @@ A drag-and-drop phonics game for teaching digraphs and blends to early readers (
 
 ## Screenshots
 
-**Difficulty Selection**
-
 ![Difficulty Selection](docs/screenshots/difficulty-select.png)
-
-**Game Play**
 
 ![Game Play](docs/screenshots/gameplay.png)
 
