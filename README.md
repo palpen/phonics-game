@@ -2,6 +2,16 @@
 
 A drag-and-drop phonics game for teaching digraphs and blends to early readers (age 4+). Built for practicing systematic, explicit phonics instruction aligned with the University of Florida Literacy Institute (UFLI) program.
 
+## Screenshots
+
+**Difficulty Selection**
+
+![Difficulty Selection](docs/screenshots/difficulty-select.png)
+
+**Game Play**
+
+![Game Play](docs/screenshots/gameplay.png)
+
 ## Quick Start
 
 ```bash
