@@ -2,7 +2,7 @@ import { useDraggable } from '@dnd-kit/core';
 import { useAudio } from '../hooks/useAudio';
 import { useEffect, useRef } from 'react';
 
-export function PictureCard({ id, word, emoji, isPlaced }) {
+export function PictureCard({ id, word, emoji, isPlaced, showPicture = true }) {
   const { attributes, listeners, setNodeRef, transform, isDragging } = useDraggable({
     id,
     disabled: isPlaced,
@@ -32,11 +32,11 @@ export function PictureCard({ id, word, emoji, isPlaced }) {
     <div
       ref={setNodeRef}
       style={style}
-      className={`picture-card ${isDragging ? 'dragging' : ''}`}
+      className={`picture-card ${isDragging ? 'dragging' : ''} ${!showPicture ? 'text-only' : ''}`}
       {...listeners}
       {...attributes}
     >
-      <div className="emoji">{emoji}</div>
+      {showPicture && <div className="emoji">{emoji}</div>}
       <div className="word">{word}</div>
       <div className="audio-hint">🔊</div>
     </div>

@@ -165,6 +165,16 @@ body {
   right: 5px;
 }
 
+.picture-card.text-only {
+  justify-content: center;
+  padding: 20px;
+}
+
+.picture-card.text-only .word {
+  font-size: 28px;
+  font-weight: 700;
+}
+
 .feedback {
   position: fixed;
   top: 50%;

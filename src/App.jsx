@@ -15,6 +15,7 @@ function App() {
   const [placedCards, setPlacedCards] = useState({});
   const [isRoundComplete, setIsRoundComplete] = useState(false);
   const [feedback, setFeedback] = useState(null);
+  const [showPictures, setShowPictures] = useState(true);
 
   if (!difficulty) {
     return <DifficultySelect onSelectDifficulty={setDifficulty} />;
@@ -112,12 +113,15 @@ function App() {
       <div className="app">
         <header className="app-header">
           <h1>Sort & Sound</h1>
-          <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', marginBottom: '10px' }}>
+          <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', marginBottom: '10px', flexWrap: 'wrap' }}>
             <button onClick={testAudio} style={{ padding: '10px 20px', fontSize: '16px' }}>
               🔊 Test Audio
             </button>
             <button onClick={handleSkipRound} style={{ padding: '10px 20px', fontSize: '16px', background: '#f59e0b', border: 'none', borderRadius: '8px', color: 'white', cursor: 'pointer' }}>
               ⏭️ Skip Round
+            </button>
+            <button onClick={() => setShowPictures(!showPictures)} style={{ padding: '10px 20px', fontSize: '16px', background: showPictures ? '#8b5cf6' : '#10b981', border: 'none', borderRadius: '8px', color: 'white', cursor: 'pointer' }}>
+              {showPictures ? '🖼️ Hide Pictures' : '👁️ Show Pictures'}
             </button>
           </div>
           <ScoreDisplay correct={score.correct} attempts={score.attempts} />
@@ -142,6 +146,7 @@ function App() {
               word={word.word}
               emoji={word.emoji}
               isPlaced={!!placedCards[word.id]}
+              showPicture={showPictures}
             />
           ))}
         </div>
