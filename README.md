@@ -88,3 +88,7 @@ Edit `src/data/wordSets.js` to add rounds:
 ## Browser Support
 
 Best on Chrome/Safari (full Web Speech API support). Firefox has limited voices but works.
+
+## License
+
+Original game code and documentation contributed by Palermo Penano are licensed under the [MIT License](LICENSE), to the extent of Palermo's rights. Inherited Vite/create-vite template material retains its upstream license, and third-party logos and glyph artwork are excluded from the Palermo grant. See [third-party notices and scope](THIRD_PARTY_NOTICES.md).
